@@ -69,6 +69,36 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+			<plugin>
+				<groupId>io.swagger.codegen.v3</groupId>
+				<artifactId>swagger-codegen-maven-plugin</artifactId>
+				<version>3.0.42</version>
+				<executions>
+				<execution>
+					<id>1</id>
+					<goals>
+						<goal>generate</goal>
+					</goals>
+					<phase>generate-sources</phase>
+					<configuration>
+						<inputSpec>${project.basedir}/src/main/resources/login-api.yaml</inputSpec>
+						<apiPackage>it.be.api.login</apiPackage>
+						<modelPackage>it.be.model.login</modelPackage>
+						<language>spring</language>
+						<output>${project.build.directory}/generated-sources</output>
+						<generateSupportingFiles>false</generateSupportingFiles>
+						<environmentVariables>
+							<interfaceOnly>true</interfaceOnly>
+						</environmentVariables>
+						<configOptions>
+							<dateLibrary>java8-localdatetime</dateLibrary>
+							<useTags>true</useTags>
+						</configOptions>
+					</configuration>
+				</execution>
+			</executions>
+			</plugin>
 		</plugins>
 	</build>
 

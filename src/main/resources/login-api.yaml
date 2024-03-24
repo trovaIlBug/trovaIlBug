@@ -11,7 +11,8 @@ tags:
 paths:
   /test:
     get:
-      summary: test.
+      description: test.
+      operationId: test
       tags:
         - login
       responses:

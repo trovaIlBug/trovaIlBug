@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController implements LoginApi {
 
     @Override
-    public ResponseEntity<String> testGet() {
+    public ResponseEntity<String> test() {
         return ResponseEntity.ok("ciao");
     }
 }

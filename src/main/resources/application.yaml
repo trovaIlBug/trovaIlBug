@@ -1,3 +1,17 @@
 spring:
   application:
     name:findTheBug
+
+  datasource:
+    url: ${DATABASE_URL}
+    username: <username>
+    password: <password>
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 3
+      connection-test-query: SELECT 1
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update

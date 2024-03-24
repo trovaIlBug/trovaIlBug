@@ -61,6 +61,11 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>io.swagger.codegen.v3</groupId>
+			<artifactId>swagger-codegen-maven-plugin</artifactId>
+			<version>3.0.54</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -73,7 +78,7 @@
 			<plugin>
 				<groupId>io.swagger.codegen.v3</groupId>
 				<artifactId>swagger-codegen-maven-plugin</artifactId>
-				<version>3.0.42</version>
+				<version>3.0.54</version>
 				<executions>
 				<execution>
 					<id>1</id>
@@ -92,7 +97,7 @@
 							<interfaceOnly>true</interfaceOnly>
 						</environmentVariables>
 						<configOptions>
-							<dateLibrary>java8-localdatetime</dateLibrary>
+							<dateLibrary>java11</dateLibrary>
 							<useTags>true</useTags>
 						</configOptions>
 					</configuration>
